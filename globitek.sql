@@ -114,3 +114,16 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` VALUES (1,'James','Munroe','test@test.com','jmonroe99',NULL);
+
+--
+-- Inserting secret value into table `secrets`
+--
+
+DROP TABLE IF EXISTS `secrets`;
+CREATE TABLE `secrets` (
+      `id` int(11) NOT NULL AUTO_INCREMENT,
+      `secret` varchar(255) NOT NULL,
+      PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3;
+
+INSERT INTO `secrets` (id, secret) VALUES (1, '$thisismysecret$');
